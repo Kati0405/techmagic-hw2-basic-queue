@@ -3,7 +3,7 @@ const addBtn = document.querySelector('.add-btn');
 const removeBtn = document.querySelector('.remove-btn');
 const list = document.querySelector('.items');
 
-let arrayOfItems = JSON.parse(localStorage.getItem('items'));
+let arrayOfItems = JSON.parse(localStorage.getItem('items')) || [];
 
 const showItems = (items) => {
   for (let i = 0; i < items.length; i++) {
