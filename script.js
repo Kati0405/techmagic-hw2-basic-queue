@@ -2,6 +2,7 @@ const input = document.querySelector('.input-field');
 const addBtn = document.querySelector('.add-btn');
 const removeBtn = document.querySelector('.remove-btn');
 const list = document.querySelector('.items');
+const itemsLimit = 32;
 
 let arrayOfItems = JSON.parse(localStorage.getItem('items')) || [];
 
@@ -50,7 +51,7 @@ const checkQueueMinLength = (items) => {
 };
 
 const checkQueueMaxLength = (items) => {
-  if (items.length >= 32) {
+  if (items.length >= itemsLimit) {
     alert('The queue has its limit');
     return false;
   }
